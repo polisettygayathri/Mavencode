@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <listeners>
+    <listener class-name="ExtentReportsDemo.listenersExample"/>
+  </listeners>
+  <test name="PageObjectModelTest">
+    <classes>
+      <class name="POMtest.LoginTest"/>
+    </classes>
+  </test> <!-- PageObjectModelTest -->
+  <test name="PageObjectModelTest(failed)">
+    <classes>
+      <class name="POMtest.LoginTest">
+        <methods>
+          <include name="verifyLogout"/>
+          <include name="launchApp"/>
+          <include name="closeApp"/>
+        </methods>
+      </class> <!-- POMtest.LoginTest -->
+    </classes>
+  </test> <!-- PageObjectModelTest(failed) -->
+</suite> <!-- Failed suite [Suite] -->
